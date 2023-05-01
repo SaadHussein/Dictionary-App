@@ -1,0 +1,115 @@
+@media (max-width: 700px) {
+  .input {
+    width: 85%;
+  }
+
+  .wooord {
+    font-size: 48px;
+  }
+
+  .spelling {
+    font-size: 24px;
+  }
+
+  .audiooo {
+    font-size: 52px;
+    padding: 12px;
+  }
+
+  .meaning-list-item {
+    font-size: 18px;
+  }
+
+  .synonyms-word {
+    font-size: 16px;
+  }
+
+  .verb-meaning-list-item {
+    font-size: 18px;
+  }
+
+  .source-link {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .input {
+    width: 100%;
+  }
+
+  .wooord {
+    font-size: 40px;
+  }
+
+  .spelling {
+    font-size: 20px;
+  }
+
+  .audiooo {
+    font-size: 32px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 475px) {
+  .information {
+    width: 95%;
+  }
+
+  .meaning-list-item {
+    font-size: 15px;
+  }
+
+  .verb-meaning-list-item {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 350px) {
+  .header-container h2 {
+    font-size: 24px;
+  }
+
+  .word-audio {
+    width: 100%;
+  }
+
+  .noun {
+    width: 100%;
+  }
+
+  .verb {
+    width: 100%;
+  }
+
+  .source {
+    width: 100%;
+  }
+}
+
+@media (max-width: 300px) {
+  .wooord {
+    font-size: 36px;
+  }
+
+  .header-container h2 {
+    font-size: 18px;
+  }
+
+  .spelling {
+    font-size: 18px;
+  }
+
+  .synonyms-header {
+    margin-right: 10px;
+  }
+
+  .source-word {
+    margin-right: 5px;
+  }
+
+  .source {
+    padding: 12px 2px;
+  }
+}

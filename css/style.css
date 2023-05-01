@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Tahoma, sans-serif;
+}
+
+header {
+  background-color: #d45ce2;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  padding: 24px 12px;
+  margin: 0 auto 20px;
+  color: #fff;
+}
+
+.header-container h2 {
+  font-size: 36px;
+}
+
+.book-icon {
+  font-size: 48px;
+}
+
+.information {
+  width: 70%;
+  padding: 24px 12px;
+  margin: 0 auto;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  background-color: #d6d1d1;
+  padding: 24px 18px;
+  margin: 20px auto 0;
+  border-radius: 24px;
+}
+
+.input input {
+  width: 95%;
+  padding: 20px 10px;
+  font-size: 20px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.search-icon {
+  font-size: 48px;
+  color: #7d7d7d;
+  cursor: pointer;
+}
+
+.about {
+  display: none;
+}
+
+.word-audio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 35px auto 0;
+  width: 80%;
+}
+
+.wooord {
+  font-size: 76px;
+  margin-bottom: 12px;
+}
+
+.spelling {
+  color: #d45ce2;
+  font-size: 28px;
+}
+
+.audiooo {
+  font-size: 64px;
+  padding: 24px;
+  border-radius: 50%;
+  border: 3px solid #d45ce2;
+  background-color: #f2e8f4;
+  cursor: pointer;
+}
+
+.noun {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding: 24px;
+  margin: 64px auto 0;
+  width: 80%;
+  border-top: 1px solid #c8c6c6;
+}
+
+.noun-header {
+  margin-bottom: 40px;
+}
+
+.meaning-header {
+  color: #777;
+}
+
+.meaning-list {
+  margin: 16px 0 36px;
+}
+
+.meaning-list-item {
+  font-size: 20px;
+  margin-left: 30px;
+  margin-bottom: 9px;
+}
+
+.synonyms {
+  display: flex;
+  align-items: center;
+}
+
+.synonyms-header {
+  color: #777;
+  margin-right: 36px;
+}
+
+.synonyms-word {
+  font-size: 24px;
+  color: #d45ce2;
+  font-weight: bold;
+}
+
+.verb {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 24px;
+  margin: 64px auto 0;
+  width: 80%;
+  border-top: 1px solid #c8c6c6;
+}
+
+.verb-header {
+  margin-bottom: 40px;
+}
+
+.verb-meaning-header {
+  color: #777;
+}
+
+.verb-meaning-list {
+  margin: 16px 0 36px;
+}
+
+.verb-meaning-list-item {
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.verb-meaning-list-item-header {
+  margin-bottom: 18px;
+}
+
+.source {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  margin: 64px auto 0;
+  width: 80%;
+  border-top: 1px solid #c8c6c6;
+}
+
+.source-word {
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.source-link {
+  color: black;
+}

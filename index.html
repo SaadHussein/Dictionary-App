@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dictionary App</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h2>Dictionary Application</h2>
+        <ion-icon name="book-outline" class="book-icon"></ion-icon>
+      </div>
+    </header>
+
+    <div class="information">
+      <div class="input">
+        <input type="text" id="word" placeholder="Enter Word" />
+        <ion-icon
+          name="search-circle-outline"
+          class="search-icon"
+          id="submit"
+        ></ion-icon>
+      </div>
+
+      <div class="about">
+        <div class="word-audio">
+          <div class="woord">
+            <h1 class="wooord"></h1>
+            <h3 class="spelling"></h3>
+          </div>
+          <div class="audioo">
+            <ion-icon class="audiooo" name="play-outline"></ion-icon>
+          </div>
+        </div>
+
+        <div class="noun">
+          <h2 class="noun-header">noun</h2>
+          <div class="meaning">
+            <h2 class="meaning-header">Meaning</h2>
+            <ul class="meaning-list" id="meaning-list">
+              <!-- <li class="meaning-list-item">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat
+                blanditiis eum natus incidunt velit inventore totam deleniti.
+                Iure, qui molestias! Quod temporibus deserunt totam veritatis
+                natus eligendi enim eum, consequuntur qui consectetur libero
+                consequatur obcaecati?
+              </li>
+              <li class="meaning-list-item">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+                distinctio, sunt dolor iure magnam quos labore omnis quod quam
+                ea.
+              </li>
+              <li class="meaning-list-item">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla
+                velit dignissimos architecto at a exercitationem nobis, harum
+                aperiam alias eos corporis deleniti id minus officia!
+              </li> -->
+            </ul>
+          </div>
+          <div class="synonyms">
+            <h2 class="synonyms-header">Synonyms</h2>
+            <p class="synonyms-word"></p>
+          </div>
+        </div>
+
+        <div class="verb">
+          <h2 class="verb-header">verb</h2>
+          <div class="verb-meaning">
+            <h2 class="verb-meaning-header">Meaning</h2>
+            <ul class="verb-meaning-list" id="verb-meaning-list">
+              <!-- <li class="verb-meaning-list-item">
+                <p class="verb-meaning-list-item-header">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Magni, itaque!
+                </p>
+                <p class="verb-meaning-list-item-item">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Iste, earum!
+                </p>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+
+        <div class="source">
+          <p class="source-word">Source</p>
+          <a class="source-link" href="#"></a>
+        </div>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
