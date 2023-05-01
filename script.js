@@ -19,10 +19,10 @@ function getData(word) {
         throw new Error("This Word is not Correct");
       }
       makeInfoVisible();
-      setAboutInformation(data[0]);
       audioo.addEventListener("click", () => {
         setAudio(data[0]);
       });
+      setAboutInformation(data[0]);
       setMeaningSection(data[0]);
       setVerbList(data[0]);
       setLink(data[0]);
@@ -43,13 +43,17 @@ function makeInfoVisible() {
 
 function setAboutInformation(data) {
   myWord.innerHTML = data.word;
-  spelling.innerHTML = data.phonetics[1].text
-    ? data.phonetics[1].text
-    : data.phonetic;
+  spelling.innerHTML = data.phonetic;
 }
 
 function setAudio(data) {
-  const audio = new Audio(data.phonetics[0].audio);
+  let audio;
+  data.phonetics.forEach((phonetic) => {
+    if (phonetic.audio !== "") {
+      audio = new Audio(phonetic.audio);
+    }
+  });
+
   audio.play();
 }
 
@@ -57,35 +61,53 @@ function setMeaningSection(data) {
   let listItems = "";
   meaningList.innerHTML = "";
   synonymsWord.innerHTML = "";
-  data.meanings[0].definitions.forEach((item) => {
-    listItems += `
-      <li class="meaning-list-item">${item.definition}</li>
-    `;
+
+  data.meanings.forEach((meaning) => {
+    if (meaning.partOfSpeech === "noun") {
+      meaning.definitions.forEach((item) => {
+        console.log(item.definition);
+        listItems += `
+          <li class="meaning-list-item">${item.definition}</li>
+        `;
+      });
+
+      if (meaning.synonyms.length !== 0) {
+        synonymsWord.innerHTML = meaning.synonyms[0];
+      } else {
+        synonymsWord.innerHTML = "There is no Synonyms";
+      }
+    }
   });
 
-  meaningList.innerHTML = listItems;
-
-  if (data.meanings[0].synonyms.length !== 0) {
-    synonymsWord.innerHTML = data.meanings[0].synonyms[0];
-  } else {
-    synonymsWord.innerHTML = "There is no Synonyms";
+  if (listItems === "") {
+    listItems = "There are no Meanings for this Word.";
   }
+
+  meaningList.innerHTML = listItems;
 }
 
 function setVerbList(data) {
   let listItems = "";
   verbMeaningList.innerHTML = "";
 
-  data.meanings[1].definitions.forEach((item) => {
-    listItems += `
-    <li class="verb-meaning-list-item">
-      <p class="verb-meaning-list-item-header">${item.definition}</p>
-      <p class="verb-meaning-list-item-item">${
-        item.example ? item.example : ""
-      }</p>
-    </li>
-    `;
+  data.meanings.forEach((meaning) => {
+    if (meaning.partOfSpeech === "verb") {
+      meaning.definitions.forEach((item) => {
+        listItems += `
+        <li class="verb-meaning-list-item">
+          <p class="verb-meaning-list-item-header">${item.definition}</p>
+          <p class="verb-meaning-list-item-item">${
+            item.example ? item.example : ""
+          }</p>
+        </li>
+        `;
+      });
+    }
   });
+
+  if (listItems === "") {
+    listItems = "There are no Verbs for this Word.";
+  }
 
   verbMeaningList.innerHTML = listItems;
 }
